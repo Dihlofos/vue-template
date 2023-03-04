@@ -1,2 +1,2 @@
-export const BASE_URL = 'http://35.184.172.253:8000/site'; // Server url.
-export const SITE_NAME = 'snowmoscow'; // Name of the landing here.
+export const BASE_URL = 'http://server-url-here'; // Server url.
+export const SITE_NAME = 'siteName'; // Name of the landing here.
