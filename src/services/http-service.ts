@@ -27,7 +27,6 @@ export default class HttpService {
 	configureInterceptors(): void {
 		this.instance.interceptors.response.use(
 			response => {
-				console.log('response', response);
 				return Promise.resolve(response.data);
 			},
 			error => {
