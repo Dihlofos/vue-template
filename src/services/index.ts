@@ -7,8 +7,6 @@ export const createServices = () => {
 	const httpService = new HttpService();
 	const apiService = new ApiService({ httpService });
 
-	httpService.configureInterceptors();
-
 	return {
 		httpService,
 		apiService,
