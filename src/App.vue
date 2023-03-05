@@ -3,15 +3,11 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-	<div class="wrapper">
-		<RouterView />
-	</div>
+	<RouterView />
 </template>
 
 <style lang="scss">
-.wrapper {
-	&__wrappeskiy {
-		background-color: $black;
-	}
+#app {
+	height: 100%;
 }
 </style>

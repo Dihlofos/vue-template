@@ -11,7 +11,7 @@ const useMainPageStore = defineStore({
 
 	state: (): IMainState => ({
 		pageData: null,
-		pageName: 'snowmoscow',
+		pageName: '',
 		loading: false,
 	}),
 
