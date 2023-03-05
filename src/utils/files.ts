@@ -1,8 +1,8 @@
 /**
- * Функция для получения файла с компьютера пользователя
+ * Function added files from computed
  *
- * @param {((file: File) => void)} callback Функция, которая вызывается, когда пользователь выбрал файл
- * @param {(string|undefined)} accept Mime-type документов, который можно выбрать
+ * @param {((file: File) => void)} callback Callback calls after user chose a file
+ * @param {(string|undefined)} accept Mime-type allows to upload
  * @returns {void}
  */
 export const getFileFromComputer = (callback: (file: File) => void, accept?: string): void => {
