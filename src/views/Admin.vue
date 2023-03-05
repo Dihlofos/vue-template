@@ -47,6 +47,7 @@ mainPageStore.fetchLandingData();
 
 		a {
 			color: $white;
+			transition: color 0.2s ease-in-out;
 
 			&:hover {
 				color: $pink;
