@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+
+import '@/styles/index.scss';
 </script>
 
 <template>
@@ -9,5 +11,8 @@ import { RouterView } from 'vue-router';
 <style lang="scss">
 #app {
 	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
 }
 </style>

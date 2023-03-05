@@ -1,8 +1,5 @@
 import { fileURLToPath, URL } from 'node:url';
 
-import Components from 'unplugin-vue-components/vite';
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
-
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
@@ -12,13 +9,7 @@ export default defineConfig({
 		host: 'localhost',
 		port: 8080,
 	},
-	plugins: [
-		vue(),
-		Components({
-			resolvers: [AntDesignVueResolver()],
-			dts: true,
-		}),
-	],
+	plugins: [vue()],
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -27,7 +18,10 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-				additionalData: `@import "@/styles/index.scss";`,
+				additionalData: `
+					@import "@/styles/_vars.scss";
+					@import "@/styles/_colors.scss";
+				`,
 			},
 		},
 	},

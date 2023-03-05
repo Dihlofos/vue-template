@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import router, { RouteNames } from '@/router';
 import useMainPageStore from '@/stores/main';
+import UiButton from '../ui/ui-button.vue';
 
-import { ArrowLeftOutlined } from '@ant-design/icons-vue';
 import { computed } from 'vue';
+import IconBack from '../icons/IconBack.vue';
 
 const mainPageStore = useMainPageStore();
 
@@ -25,32 +26,25 @@ function clear() {
 <template>
 	<div class="header">
 		<div class="header__wrapper">
-			<a-button
-				class="header__back-button"
-				type="primary"
-				size="large"
-				@click="goToMain"
-			>
-				<template #icon><arrow-left-outlined /></template>
+			<UiButton @click="goToMain">
+				<IconBack />
 				{{ backText }}
-			</a-button>
+			</UiButton>
 			<h1 class="header__title">Редактирование контента</h1>
 			<div class="header__action-buttons">
-				<a-button
+				<UiButton
 					class="header__back-button"
-					type="primary"
-					size="large"
 					@click="save"
 				>
 					Сохранить
-				</a-button>
-				<a-button
+				</UiButton>
+				<UiButton
 					class="header__back-button"
-					size="large"
+					theme="transparent"
 					@click="clear"
 				>
 					Сбросить
-				</a-button>
+				</UiButton>
 			</div>
 		</div>
 	</div>
@@ -65,6 +59,7 @@ function clear() {
 	left: 0;
 	background-color: $darkblue;
 	color: white;
+	z-index: 20;
 
 	&__wrapper {
 		display: flex;
