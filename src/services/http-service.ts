@@ -24,6 +24,18 @@ export default class HttpService {
 		this.instance = axios.create({ headers: HEADERS, timeout: REQUEST_TIMEOUT });
 	}
 
+	configureInterceptors(): void {
+		this.instance.interceptors.response.use(
+			response => {
+				console.log('response', response);
+				return Promise.resolve(response.data);
+			},
+			error => {
+				return Promise.reject(error.response);
+			},
+		);
+	}
+
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	get(url: string, config?: AxiosRequestConfig): Promise<any> {
 		return this.instance.get(url, config);
