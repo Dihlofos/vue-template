@@ -44,4 +44,14 @@ export default class HttpService {
 	post(url: string, data?: any, config?: AxiosRequestConfig): Promise<any> {
 		return this.instance.post(url, data, config);
 	}
+
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	put(url: string, data?: any, config?: AxiosRequestConfig): Promise<any> {
+		return this.instance.put(url, data, config);
+	}
+
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	delete(url: string, data?: any): Promise<any> {
+		return this.instance.delete(url, data);
+	}
 }
